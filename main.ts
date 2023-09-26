@@ -1,8 +1,21 @@
-let numero: number = 10
-let valorNulo: null 
-let texto: string = "Ola, mundo"
-let boleano: boolean = true
-let arr: Array<String> = ["ana", "jose", "maria"]
-let obj: Object = {"ana": 12, "jose": 50, "maria": 35}
+enum TipoDeUsuario {
+    Professor,
+    Aluno,
+    Convidado
+}
 
-console.log(texto);
+const verificarPermissao = (usuario: TipoDeUsuario): void => {
+   switch(usuario) {
+     case TipoDeUsuario.Professor:
+        console.log("Seja bem vindo Professor!");
+     break;
+     case TipoDeUsuario.Aluno:
+        console.log("Seja bem vindo Aluno!");
+     break;
+     case TipoDeUsuario.Convidado:
+        console.log("Voce e um convidado e nao tem acesso ao Sistema!");
+     break;
+   }
+}
+
+verificarPermissao(TipoDeUsuario.Convidado)
