@@ -39,7 +39,6 @@ export class FactoryPc implements FactoryComputador {
     return `Memória RAM: ${this.ram}, HD: ${this.hd}, CPU: ${this.cpu}, Tipo: ${this.type}`;
   }
 }
-
 export class FactoryServer implements FactoryComputador {
   private ram: string;
   private cpu: string;
